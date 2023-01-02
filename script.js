@@ -62,8 +62,19 @@ function init() {
                         items: [
                             {
                                 name: 'SMT5',
-                                hasChildren: false,
-                                items: []
+                                hasChildren: true,
+                                items: [
+                                    {
+                                        name: 'Test',
+                                        hasChildren: true,
+                                        items: [
+                                            {
+                                                name: 'Test',
+                                                hasChildren: false,
+                                                items: []
+                                            },]
+                                    },
+                                ]
                             },
                             {
                                 name: 'SMT6',
@@ -107,9 +118,8 @@ function init() {
             // если hasChildren, то запускаем renderParent
             // если !hasChildren, то запускаем renderChildren
             // возвращает рендер родительского элемента
-            if (data.hasChildren)
-                {
-                    let result = 
+            if (data.hasChildren) {
+                let result =
                     `
                     <div class="list-item list-item_open" data-parent>
                         <div class="list-item__inner">
@@ -117,21 +127,23 @@ function init() {
                             <img class="list-item__folder" src="img/folder.png" alt="folder">
                             <span>${data.name}</span>
                         </div>
-                        <div class="list-item__items">
-                            ${data.items.map(x => this.renderParent(x)).join('')}
-                        </div>
-                    </div>
-                    `
-                    return result;
-                }
+                        <div class="list-item__items">`
+                for (let i = 0; i < data.items.length; i++)
+                    result += this.renderParent(data.items[i])
+                result += `
+                         </div>
+                     </div>
+                     `
+                return result;
+            }
             else
                 return this.renderChildren(data)
         }
 
         this.renderChildren = function (data) {
             // возвращает рендер элемента без вложенности
-            let result = 
-            `
+            let result =
+                `
             <div class="list-item">
                 <div class="list-item__inner">
                     <img class="list-item__folder" src="img/folder.png" alt="folder">
