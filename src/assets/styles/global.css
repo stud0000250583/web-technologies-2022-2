@@ -3,7 +3,7 @@ html {
     font-weight: 400;
 }
 
-*,
+/* *,
 *:before,
 *:after {
     box-sizing: border-box;
@@ -79,4 +79,4 @@ html {
 .menu li a {
     color: #000000;
     text-decoration: none;
-}
+} */
