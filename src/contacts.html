@@ -1,45 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>Contacts!</title>
     <link rel="stylesheet" href="./assets/styles/style.css">
 </head>
+
 <body>
     <header>
         <nav>
-            <ul>
+            <ul ul class="menu">
                 <li><a href="./index.html">Main page</a></li>
                 <li><a href="./contacts.html">Contacts</a></li>
             </ul>
         </nav>
-    <hr>
     </header>
 
     <div>
-        <h2>Contact Us:</h2>
-        <p>Hurry up!</p>
+        <h2 class="head2">Contact Us:</h2>
+        <p class="par">Hurry up!</p>
         <img width="100px" height="100px" src="assets/img/3x.png" alt="Please!">
-        <h4>Address:</h4>
-        <p>9800 Montgomery Blvd NE, Albuquerque</p>
-        <h4>Phone:</h4>
+        <h4 class="head4">Address:</h4>
+        <p class="par">9800 Montgomery Blvd NE, Albuquerque</p>
+        <h4 class="head4">Phone:</h4>
         <ul>
             <li>505-842-5662</li>
             <li>505-503-4455</li>
         </ul>
-        <h4>Online services:</h4>
+        <h4 class="head4">Online services:</h4>
         <ul>
             <li><a href="http://bettercallsaul.com/">Our website</a></li>
             <li><a href="mailto: abc@example.com">Send us an Email</a></li>
         </ul>
-        <h4>Send us a message:</h4>
-        <label>Full   name: <input type="text" placeholder="Enter your name"></label>
+        <h4 class="head4">Send us a message:</h4>
+        <label>Full name: <input class="input-shared" type="text" placeholder="Enter your name"></label>
         <br><br>
-        <label>Your Email: <input type="text" placeholder="example@email.com"></label>
+        <label>Your Email: <input class="input-shared" type="text" placeholder="example@email.com"></label>
         <p><label for="messagebox">Your message: </label></p>
-        <textarea id="messagebox" rows="3" cols="35" placeholder="Thank you for your services!"></textarea>
+        <textarea class="input-shared" id="messagebox" rows="3" cols="35"
+            placeholder="Thank you for your services!"></textarea>
         <br>
-        <input type="submit" value="Submit!">
+        <input class="button button-gradient" type="submit" value="Submit!">
     </div>
 
     <footer>
@@ -57,4 +59,5 @@
         </nav>
     </footer>
 </body>
+
 </html>
