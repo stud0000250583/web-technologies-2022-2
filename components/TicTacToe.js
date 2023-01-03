@@ -64,7 +64,6 @@ export const TicTacToe = {
 
                 // проверка на наличие пустых блоков
                 if (!this.checkHasEmptyBlocks()) {
-                    // изменение статуса игры
                     // проверяем, является ли последний ход победным
                     if (this.checkForWin()) {
                         this.setGameEndStatus()
@@ -129,10 +128,9 @@ export const TicTacToe = {
         for (let i = 0; i < this.boxes.length; i++) {
             this.setBlockValue(this.boxes[i], true)
             this.setBlockDom(this.boxes[i], true)
-            // всегда должны начинать крестики
-            this.isXTurn = true
-            document.getElementById('move-value').textContent = 'X'
         }
+        this.isXTurn = true
+        document.getElementById('move-value').textContent = 'X'
         this.isGameEnd = false
     },
 
