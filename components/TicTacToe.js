@@ -88,6 +88,7 @@ export const TicTacToe = {
                     // вывод информации о победителе
                     setTimeout(() => {
                         alert('Победил ' + this.getCurrentTurnValue())
+                        return
                     })
                 } else {
                     // изменить значение текущего хода в объекте
