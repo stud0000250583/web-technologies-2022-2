@@ -14,7 +14,7 @@
     height: 200%;
     top: -80%;
     z-index: -1;
-    background: url(/assets/images/column-left.webp) repeat-y, url(/assets/images/column-right.webp) repeat-y;
+    background: url("../images/column-left.webp") repeat-y, url("../images/column-right.webp") repeat-y;
     background-position-x: 764px, 1170px;
     transform: rotate(-12deg);
 }
