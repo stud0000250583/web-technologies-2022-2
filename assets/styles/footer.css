@@ -1,0 +1,79 @@
+.footer__wrapper {
+    background: #FFFFFF;
+    padding: 48px 108px;
+}
+
+.footer {
+    background: #101828;
+    box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.08), 0px 2px 24px rgba(0, 0, 0, 0.08);
+    border-radius: 12px;
+}
+
+.footer__title-contents {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 18px;
+    letter-spacing: -0.154px;
+    color: #FFFFFF;
+    padding: 24px;
+    text-align: center;
+}
+
+.footer__contacts {
+    padding-top: 44px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.footer__contacts-entry {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer__contacts-text-light {
+    display: flex;
+    flex-direction: row;
+    gap: 12px;
+
+    font-family: 'SF Pro Text';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 18px;
+    letter-spacing: -0.154px;
+    color: #98A2B3;
+}
+
+.footer__contacts-text-regular {
+    padding-top: 10px;
+
+    font-family: 'SF Pro Text';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 17px;
+    line-height: 22px;
+    letter-spacing: -0.408px;
+    color: #FFFFFF;
+}
+
+.footer__slogan {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 12px;
+    padding-top: 40px;
+    padding-bottom: 24px;
+}
+
+.footer__slogan-text {
+    font-family: 'SF Pro Text';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 16px;
+    letter-spacing: -0.078px;
+    color: #FFFFFF;
+}

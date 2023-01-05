@@ -1,0 +1,126 @@
+.technologies {
+    background-color: white;
+}
+
+.technologies__inner {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 128px;
+    max-width: 1224px;
+    margin-left: 108px;
+    margin-top: 80px;
+    margin-bottom: 80px;
+}
+
+.technologies__title-main {
+    margin-bottom: 32px;
+
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 144%;
+    letter-spacing: 0.326451px;
+    color: #101828;
+}
+
+.technologies__title-sub {
+    font-family: 'SF Pro Text';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 24px;
+    letter-spacing: 0.38px;
+    margin-bottom: 16px;
+}
+
+.technologies__description-main {
+    font-family: 'SF Pro Text';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 20px;
+    letter-spacing: -0.24px;
+    margin-bottom: 34px;
+}
+
+.technologies__description-sub {
+    font-family: 'SF Pro Text';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 22px;
+    letter-spacing: -0.408px;
+    margin-bottom: 34px;
+}
+
+.technologies__description-last {
+    font-family: 'SF Pro Text';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 22px;
+    letter-spacing: -0.408px;
+    margin-bottom: 0px;
+}
+
+.technologies__menu {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.menu-item {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #1D2939;
+    font-size: 20px;
+    line-height: 24px;
+    letter-spacing: 0.38px;
+    margin-bottom: 20px;
+
+    font-family: 'SF Pro Text';
+    font-style: normal;
+    font-weight: 400;
+}
+
+.menu-item:last-of-type {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #1D2939;
+    font-size: 20px;
+    line-height: 24px;
+    letter-spacing: 0.38px;
+    margin-bottom: 0px;
+}
+
+.menu-item:hover {
+    font-family: 'SF Pro Text';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 24px;
+    letter-spacing: 0.38px;
+    color: #101828;
+}
+
+.menu-item__text {
+    border-bottom: 1px solid transparent;
+    padding-bottom: 4px;
+}
+
+.menu-item:hover .menu-item__text {
+    border-bottom-color: #2d66ee;
+}
+
+.technologies__menu-item-icon {
+    padding-left: 21px;
+    padding-bottom: 4px;
+}
+
+.technologies__menu-entry {
+    display: flex;
+    flex-direction: row;
+}

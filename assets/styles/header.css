@@ -1,0 +1,107 @@
+.header__wrapper {
+    position: fixed;
+    left: 108px;
+    top: 24px;
+
+    background: #FFFFFF;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.08);
+    border-radius: 12px;
+
+    display: flex;
+    flex-direction: row;
+    z-index: 2;
+}
+
+.header__main-entry {
+    padding-top: 16px;
+    padding-bottom: 16px;
+    padding-left: 24px;
+    padding-right: 80px;
+}
+
+.header__main-entry a {
+    text-decoration: none;
+    color: #2D66EE;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 18px;
+    letter-spacing: -0.154px;
+}
+
+.header__common-entry {
+    padding-top: 19px;
+    padding-bottom: 19px;
+    padding-right: 24px;
+}
+
+.header__common-entry:last-of-type {
+    padding-top: 19px;
+    padding-bottom: 19px;
+    padding-right: 0px;
+}
+
+.header__common-entry a {
+    font-family: 'SF Pro Text';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 18px;
+    letter-spacing: -0.154px;
+    color: #101828;
+
+    text-decoration: none;
+}
+
+.header__contacts {
+    display: flex;
+    flex-direction: row;
+}
+
+.header__phone-icon {
+    padding-left: 85px;
+    padding-top: 18px;
+    padding-bottom: 18px;
+}
+
+.header__email-icon {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 34px;
+}
+
+.header__email {
+    padding-right: 24px;
+    padding-top: 19px;
+    padding-bottom: 19px;
+    padding-left: 10px;
+}
+
+.header__email a {
+    font-family: 'SF Pro Text';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 18px;
+    letter-spacing: -0.154px;
+    color: #2D66EE;
+
+    text-decoration: none;
+}
+
+.header__phone-number {
+    padding-top: 19px;
+    padding-bottom: 19px;
+    padding-left: 13px;
+}
+
+.header__phone-number a {
+    font-family: 'SF Pro Text';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 18px;
+    letter-spacing: -0.154px;
+    color: #2D66EE;
+
+    text-decoration: none;
+}

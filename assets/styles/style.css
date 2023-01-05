@@ -1,0 +1,12 @@
+@import "/assets/styles/reset.css";
+@import "/assets/styles/fonts.css";
+@import "/assets/styles/header.css";
+@import "/assets/styles/main-frame.css";
+@import "/assets/styles/technologies.css";
+@import "/assets/styles/footer.css";
+
+html,
+body {
+    height: 100%;
+    font-family: 'Inter', sans-serif;
+}
