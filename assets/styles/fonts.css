@@ -1,6 +1,6 @@
 @font-face {
     font-family: "Inter";
-    src: url("/static/fonts/Inter-Bold.ttf") format("truetype");
+    src: url("../../static/fonts/Inter-Bold.ttf") format("truetype");
     font-weight: 700;
     font-display: swap;
     font-style: normal;
@@ -8,7 +8,7 @@
 
 @font-face {
     font-family: "Inter";
-    src: url("/static/fonts/Inter-Bold.woff2") format("woff2");
+    src: url("../../static/fonts/Inter-Bold.woff2") format("woff2");
     font-weight: 700;
     font-display: swap;
     font-style: normal;
@@ -16,7 +16,7 @@
 
 @font-face {
     font-family: "SF Pro Text";
-    src: url("/static/fonts/SF-Pro-Text-Bold.ttf") format("truetype");
+    src: url("../../static/fonts/SF-Pro-Text-Bold.ttf") format("truetype");
     font-weight: 700;
     font-display: swap;
     font-style: normal;
@@ -24,7 +24,7 @@
 
 @font-face {
     font-family: "SF Pro Text";
-    src: url("/static/fonts/SF-Pro-Text-Bold.woff2") format("woff2");
+    src: url("../../static/fonts/SF-Pro-Text-Bold.woff2") format("woff2");
     font-weight: 700;
     font-display: swap;
     font-style: normal;
@@ -32,7 +32,7 @@
 
 @font-face {
     font-family: "SF Pro Text";
-    src: url("/static/fonts/SF-Pro-Text-Semibold.ttf") format("truetype");
+    src: url("../../static/fonts/SF-Pro-Text-Semibold.ttf") format("truetype");
     font-weight: 600;
     font-display: swap;
     font-style: normal;
@@ -40,7 +40,7 @@
 
 @font-face {
     font-family: "SF Pro Text";
-    src: url("/static/fonts/SF-Pro-Text-Semibold.woff2") format("woff2");
+    src: url("../../static/fonts/SF-Pro-Text-Semibold.woff2") format("woff2");
     font-weight: 600;
     font-display: swap;
     font-style: normal;
@@ -48,7 +48,7 @@
 
 @font-face {
     font-family: "SF Pro Text";
-    src: url("/static/fonts/SF-Pro-Text-Medium.ttf") format("truetype");
+    src: url("../../static/fonts/SF-Pro-Text-Medium.ttf") format("truetype");
     font-weight: 500;
     font-display: swap;
     font-style: normal;
@@ -56,7 +56,7 @@
 
 @font-face {
     font-family: "SF Pro Text";
-    src: url("/static/fonts/SF-Pro-Text-Medium.woff2") format("woff2");
+    src: url("../../static/fonts/SF-Pro-Text-Medium.woff2") format("woff2");
     font-weight: 500;
     font-display: swap;
     font-style: normal;
@@ -64,7 +64,7 @@
 
 @font-face {
     font-family: "SF Pro Text";
-    src: url("/static/fonts/SF-Pro-Text-Regular.ttf") format("truetype");
+    src: url("../../static/fonts/SF-Pro-Text-Regular.ttf") format("truetype");
     font-weight: 400;
     font-display: swap;
     font-style: normal;
@@ -72,7 +72,7 @@
 
 @font-face {
     font-family: "SF Pro Text";
-    src: url("/static/fonts/SF-Pro-Text-Regular.woff2") format("woff2");
+    src: url("../../static/fonts/SF-Pro-Text-Regular.woff2") format("woff2");
     font-weight: 400;
     font-display: swap;
     font-style: normal;
