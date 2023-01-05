@@ -12,6 +12,10 @@
     z-index: 2;
 }
 
+.header__mobile-menu {
+    display: none;
+}
+
 .header__main-entry {
     padding-top: 16px;
     padding-bottom: 16px;
