@@ -1,9 +1,9 @@
-@import "/assets/styles/reset.css";
-@import "/assets/styles/fonts.css";
-@import "/assets/styles/header.css";
-@import "/assets/styles/main-frame.css";
-@import "/assets/styles/technologies.css";
-@import "/assets/styles/footer.css";
+@import "./reset.css";
+@import "./fonts.css";
+@import "./header.css";
+@import "./main-frame.css";
+@import "./technologies.css";
+@import "./footer.css";
 
 html,
 body {
