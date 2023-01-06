@@ -1,0 +1,255 @@
+@import "./reset.sass"
+@import "./fonts.sass"
+@import "./header.sass"
+@import "./main-frame.sass"
+@import "./technologies.sass"
+@import "./footer.sass"
+
+html, body
+    height: 100%
+    font-family: 'Inter', sans-serif
+
+@media screen and (max-width:1439px)
+    .header__wrapper
+        display: grid
+        grid-template-columns: 1fr
+        top: 16px
+        left: 8px
+        width: calc(100vw - 16px)
+        height: 70px
+        z-index: 2
+        align-items: center
+
+    .main-frame
+        padding: 0px 25px
+
+    .main-frame__title
+        padding-top: 138px
+        font-size: 28px
+
+    .main-frame__text
+        font-size: 15px
+
+    .main-frame__feedback-title
+        font-size: 16px
+        padding: 32px 32px
+
+    .main-frame__tablet-wrapper
+        display: grid
+        grid-template-columns: 50%
+
+    .main-frame__feedback
+        margin-bottom: 32px
+
+    .main-frame__feedback-info-wrapper
+        flex-direction: column
+
+    .main-frame__feedback-info-wrapper
+        margin-left: 0px
+        margin-right: 0px
+
+    .main-frame__feedback-info-label
+        padding-left: 32px
+
+    .main-frame__feedback-info-input
+        font-size: 14px
+        margin-left: 32px
+        margin-right: 136px
+
+    .main-frame__feedback-button
+        margin-left: 32px
+
+    .footer__wrapper
+        padding: 0px 0px
+        background: #FFFFFF
+
+    .footer__contacts-entry
+        justify-self: center
+
+    .footer__contacts
+        display: grid
+        grid-template-columns: 1fr 1fr
+        gap: 30px
+
+    .header__main-entry
+        padding: 0
+        justify-self: center
+
+    .header__mobile-menu
+        display: flex
+        flex-direction: column
+        justify-self: start
+        position: absolute
+        padding: 0
+        padding-left: 32px
+
+    .header__contacts
+        justify-self: end
+        position: absolute
+        padding: 0
+        padding-right: 16px
+
+    .header__common-entry
+        display: none
+
+    .header__phone-icon
+        display: none
+
+    .header__phone-number
+        display: none
+
+    .main-frame__title br
+        display: none
+
+    .main-frame__text br
+        display: none
+
+    .main-frame__feedback-button br
+        display: none
+
+    .technologies__inner
+        margin-left: 40px
+        margin-top: 32px
+        margin-bottom: 0px
+
+    .technologies__menu
+        padding-top: 136px
+        padding-bottom: 47px
+
+    .technologies__title-main
+        font-size: 28px
+
+    .technologies__description-sub
+        font-size: 14px
+
+    .technologies__description-last
+        font-size: 14px
+
+@media screen and (max-width:767px)
+    .footer__contacts-text-regular
+        font-size: 14px
+
+    .main-frame__tablet-wrapper
+        display: block
+
+    .footer__wrapper
+        background: #FFFFFF
+        padding: 0px 0px
+
+    .footer__contacts-entry
+        justify-self: center
+
+    .footer__contacts
+        display: grid
+        grid-template-columns: 1fr 1fr
+        gap: 30px
+
+    .header__wrapper
+        display: grid
+        grid-template-columns: 1fr
+        top: 16px
+        left: 8px
+        width: calc(100vw - 16px)
+        height: 70px
+        z-index: 2
+        align-items: center
+
+    .header__main-entry
+        padding: 0
+        justify-self: center
+
+    .header__mobile-menu
+        display: flex
+        flex-direction: column
+        position: absolute
+        padding-left: 16px
+
+    .header__contacts
+        display: none
+
+    .main-frame
+        padding: 0px 25px
+
+    .main-frame__title 
+        padding-top: 138px
+        font-size: 28px
+
+    .main-frame__title br
+        display: none
+
+    .main-frame__text
+        font-size: 15px
+        padding-bottom: 536px
+
+    .main-frame__text br
+        display: none
+
+    .main-frame__feedback-title
+        font-size: 16px
+        padding: 32px 32px
+
+    .main-frame__feedback
+        margin-bottom: 32px
+
+    .main-frame__feedback-title br
+        display: none
+
+    .main-frame__feedback-info-wrapper
+        flex-direction: column
+
+    .main-frame__feedback-info-wrapper
+        margin-left: 0px
+        margin-right: 0px
+
+    .main-frame__feedback-info-label
+        padding-left: 32px
+
+    .main-frame__feedback-info-input
+        font-size: 14px
+        margin-left: 32px
+        margin-right: 136px
+
+    .main-frame__feedback-button
+        margin-left: 32px
+
+    .main-frame__feedback-button br
+        display: none
+
+    .technologies__inner
+        display: flex
+        flex-direction: column
+        gap: 44px
+        max-width: 1224px
+        margin: 0px 0px
+
+    .technologies__title-main
+        font-size: 28px
+        padding-left: 17px
+        padding-top: 32px
+
+    .technologies__description-main
+        font-size: 15px
+        padding-left: 17px
+        padding-top: 32px
+
+    .technologies__title-sub
+        padding-left: 17px
+        padding-top: 32px
+
+    .technologies__description-sub
+        font-size: 14px
+        padding-left: 17px
+        margin-right: 131px
+        color: #344054
+
+    .technologies__description-last
+        padding-left: 14px
+        margin-right: 131px
+        color: #344054
+        margin-bottom: 44px
+
+    .technologies__menu
+        padding-left: 17px
+        margin-bottom: 64px
+        padding-top: 0px
+        margin-top: 0px

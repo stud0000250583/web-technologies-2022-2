@@ -1,0 +1,132 @@
+@keyframes slide-up
+    from
+        transform: translateY(0px)
+    to
+        transform: translateY(-2220px)
+
+@keyframes slide-down
+    from
+        transform: translateY(-2340px)
+    to
+        transform: translateY(0px)
+
+.main-frame
+    background-color: #F2F4F7
+    padding-left: 108px
+    padding-bottom: 270px
+    position: relative
+    overflow: hidden
+    z-index: 1
+
+    &__animation
+        content: none
+        position: absolute
+        width: 900px
+        height: 1400px
+        z-index: -1
+        display: flex
+        left: 50%
+        top: -100px
+        transform: rotate(-12deg)
+        overflow: hidden
+
+    &__animation-left
+        content: none
+        margin: 0
+        width: 550px
+        height: 3960px
+        background-image: url("../images/column-left.webp")
+        background-repeat: repeat-y
+        z-index: -1
+        animation: slide-up 15s infinite linear
+        position: relative
+        background-size: 100%
+
+    &__animation-right
+        content: none
+        width: 350px
+        height: 3960px
+        right: 80px
+        background-image: url("../images/column-right.webp")
+        background-size: 350px
+        z-index: -1
+        animation: slide-down 15s infinite linear
+        position: relative
+        background-repeat: repeat-y
+        overflow: hidden
+
+    &__title
+        padding-top: 160px
+        font-weight: 700
+        font-size: 36px
+        line-height: 144%
+
+    &__text
+        font-weight: 500
+        font-size: 15px
+        line-height: 20px
+        font-family: 'SF Pro Text'
+        padding-top: 24px
+        padding-bottom: 64px
+
+    &__feedback
+        background: #FFFFFF
+        box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.08), 0px 0px 24px rgba(0, 0, 0, 0.16)
+        border-radius: 12px
+        max-width: fit-content
+
+    &__feedback-info-wrapper
+        padding-bottom: 26px
+        display: flex
+        flex-direction: row
+        gap: 24px
+        margin-left: 24px
+        margin-right: 24px
+
+    &__feedback-title
+        padding-top: 24px
+        padding-left: 24px
+        padding-bottom: 34px
+        font-weight: 700
+        font-size: 20px
+        line-height: 24px
+
+    &__feedback-info
+        display: flex
+        flex-direction: column
+
+    &__feedback-button
+        text-align: left
+        padding: 11px 24px
+        font-weight: 600
+        font-size: 14px
+        line-height: 18px
+        color: #FFFFFF
+        background-color: #2D66EE
+        border-radius: 8px
+        border-style: none
+        font-family: 'SF Pro Text'
+
+    &__feedback-info-label
+        font-weight: 500
+        font-size: 13px
+        line-height: 16px
+        color: #667085
+        font-family: 'SF Pro Text'
+        padding-bottom: 8px
+
+    &__feedback-info-input
+        font-weight: 400
+        font-size: 17px
+        line-height: 22px
+        color: #101828
+        text-align: left
+        border: none
+        border-bottom: 0.7px solid #D0D5DD
+        padding-bottom: 8px
+
+    &__feedback-info-input:focus
+        outline: none
+
+.blue-text
+    color: #306FF5
