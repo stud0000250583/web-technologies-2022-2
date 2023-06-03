@@ -1,0 +1,133 @@
+body {
+    font-family: monospace;
+    font-size: 20px;
+}
+
+.order {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.order-options {
+    display: flex;
+    flex-direction: column;
+    background-color: #FCFCFC;
+    padding: 40px;
+    gap: 20px;
+}
+
+.order-options-txt {
+    font-weight: bold;
+}
+
+.pizza-options {
+    padding: 40px;
+    display: flex;
+    gap: 20px;
+}
+
+.pizza-option {
+    width: 160px;
+    height: fit-content;
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0px 0px 10px 0px #E5E5E5;
+
+    transition: 250ms;
+
+    border-radius: 20px;
+    border-style: dashed;
+    border-color: transparent;
+    border-color: transparent;
+}
+
+.pizza-option:hover {
+    border-style: dashed;
+    border-color: #ED712E;
+}
+
+.pizza-option__active {
+    border-style: dashed;
+    border-color: #ED712E;
+}
+
+.pizza-option-img {
+    max-width: 150px;
+}
+
+.size-options {
+    background-color: #F3F3F7;
+    display: flex;
+    justify-content:space-evenly;
+    border-radius: 40px;
+    padding: 5px;
+}
+
+.size-option {
+    width: 100%;
+    padding: 10px 0px;
+    text-align: center;
+    transition: 500ms;
+}
+
+.size-option__active {
+    background-color: #FEFFFE;
+    border-radius: 40px;
+}
+
+.topping-options {
+    display: flex;
+    gap: 10px;
+    align-content: center;
+    text-align: center;
+}
+
+.topping-option {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    border-radius: 20px;
+    gap: 10px;
+
+    box-shadow: 0px 0px 10px 0px #E5E5E5;
+    transition: 250ms;
+
+    border-style: dashed;
+    border-color: transparent;
+    border-color: transparent;
+}
+
+.topping-option:hover {
+    border-style: dashed;
+    border-color: #ED712E;
+}
+
+.topping-option__active {
+    border-style: dashed;
+    border-color: #ED712E;
+}
+
+.topping-option-img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 120px;
+}
+
+.topping-option-price {
+    font-weight: bold;
+}
+
+.add-to-cart__button {
+    color: white;
+    background-color: #ED712E;
+    border-radius: 40px;
+    border-color: transparent;
+    width: 100%;
+    padding: 20px;
+}

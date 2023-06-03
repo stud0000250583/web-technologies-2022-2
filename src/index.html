@@ -4,10 +4,75 @@
 <head>
     <meta charset="UTF-8">
     <title>Pizza</title>
+    <link rel="stylesheet" href="./style.css">
 </head>
 
 <body>
+    <div class="order">
+        <div class="pizza-options">
+            <div class="pizza-option pizza-option__active" data-type="pepperoni">
+                <img class="pizza-option-img" src="./img/pepperoni.png" alt="Пепперони">
+                <div>Пепперони</div>
+            </div>
+            <div class="pizza-option" data-type="margherita">
+                <img class="pizza-option-img" src="./img/margherita.png" alt="Маргарита">
+                <div>Маргарита</div>
+            </div>
+            <div class="pizza-option" data-type="bavarian">
+                <img class="pizza-option-img" src="./img/bavarian.png" alt="Баварская">
+                <div>Баварская</div>
+            </div>
+        </div>
+        <div class="order-options">
+            <div class="order-options-txt">Выберите размер</div>
+            <div class="size-options">
+                <div class="size-option size-option__active" data-size="small">
+                    Маленькая
+                </div>
+                <div class="size-option" data-size="big">
+                    Большая
+                </div>
+            </div>
+            <div class="order-options-txt">Добавить по вкусу</div>
+            <div class="topping-options">
+                <div class="topping-option" data-topping="cheeseStuffedCrust">
+                    <img class="topping-option-img" src="./img/crust.png" alt="Сырный бортик">
+                    <div class="topping-option-txt">
+                        Сырный бортик
+                    </div>
+                    <div class="topping-option-price">
+                        Price
+                    </div>
+                </div>
+                <div class="topping-option" data-topping="creamyMozzarella">
+                    <img class="topping-option-img" src="./img/creamy.png" alt="Сливочная моцарелла">
+                    <div class="topping-option-txt">
+                        Сливочная моцарелла
+                    </div>
+                    <div class="topping-option-price">
+                        Price
+                    </div>
+                </div>
+                <div class="topping-option" data-topping="cheddarAndParmesan">
+                    <img class="topping-option-img" src="./img/cheddar.png" alt="Чеддер и пармезан">
+                    <div class="topping-option-txt">
+                        Чеддер и пармезан
+                    </div>
+                    <div class="topping-option-price">
+                        Price
+                    </div>
+                </div>
+            </div>
+            <div class="add-to-cart">
+                <button class="add-to-cart__button">
+                    Добавить в корзину 
+                    <span class="price">price</span> руб. (<span class="calories">calories</span> кКалл.)
+                </button>
+            </div>
+        </div>
+    </div>
     <script src="./pizzacalc.js"></script>
+    <script src="./index.js"></script>
 </body>
 
 </html>
