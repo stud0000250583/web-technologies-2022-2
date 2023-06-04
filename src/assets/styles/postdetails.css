@@ -1,0 +1,50 @@
+body {
+    background-color: #F7F7F7;
+    color: #2D2D2D;
+}
+
+.post__contents {
+    padding: 10px;
+}
+
+.post {
+    border: 1px solid #828282;
+
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.post__comments-title {
+    padding: 10px;
+    font-weight: bold;
+}
+
+.post__id {
+    font-weight: bolder;
+}
+
+.post__title {
+    font-weight: bold;
+    padding-bottom: 10px;
+}
+
+.post__comments {
+    padding: 10px;
+    gap: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.comment {
+    border: 1px solid #828282;
+    padding: 10px;
+}
+
+.comment__body {
+    padding-top: 20px;
+}
+
+.comment__name {
+    font-weight: bold;
+}
