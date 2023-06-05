@@ -73,12 +73,16 @@ export class Catalog {
     }
 
     loadItems() {
-        this.#getItems({ limit: this.limit, page: this.#page })
-            .then(({ items, total }) => {
-                this.#total = total;
-                this.renderItems(items);
-                this.renderPagination();
-            })
+        try {
+            this.#getItems({ limit: this.limit, page: this.#page })
+                .then(({ items, total }) => {
+                    this.#total = total;
+                    this.renderItems(items);
+                    this.renderPagination();
+                });
+        } catch (e) {
+            console.error(e);
+        }
     }
 
     renderItems(items) {

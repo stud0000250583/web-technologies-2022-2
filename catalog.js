@@ -8,14 +8,16 @@ const renderPostItem = item =>
 
 
 const getPostItems = async ({ limit, page }) => {
-    const response = await fetch(`https://jsonplaceholder.typicode.com/posts?_limit=${limit}&_page=${page}`);
     let total = 0;
     let items = [];
-    if (response.ok) {
-        total = response.headers.get('x-total-count');
-        items = await response.json();
-    } else {
-        console.error("Request failed: ", response.status);
+    let res = null;
+
+    try {
+        res = await fetch(`https://jsonplaceholder.typicode.com/posts?_limit=${limit}&_page=${page}`);
+        total = res.headers.get('x-total-count');
+        items = await res.json();
+    } catch (e) {
+        console.error("Request failed: ", e);
     }
     return { items, total };
 }
@@ -27,15 +29,19 @@ const renderPhotoItem = item =>
     </a>`;
 
 const getPhotoItems = async ({ limit, page }) => {
-    const response = await fetch(`https://jsonplaceholder.typicode.com/photos?_limit=${limit}&_page=${page}`);
     let total = 0;
     let items = [];
-    if (response.ok) {
-        total = response.headers.get('x-total-count');
-        items = await response.json();
-    } else {
-        console.error("Request failed: ", response.status);
+    let res = null;
+
+    try {
+        res = await fetch(`https://jsonplaceholder.typicode.com/photos?_limit=${limit}&_page=${page}`);
+        total = res.headers.get('x-total-count');
+        items = await res.json();
+    } catch (e) {
+        console.error("Request failed: ", e);
+
     }
+
     return { items, total };
 }
 

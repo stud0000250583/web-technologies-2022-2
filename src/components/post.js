@@ -31,24 +31,27 @@ function renderPostComments(comments) {
 }
 
 async function getPostItem() {
-    const response = await fetch(`https://jsonplaceholder.typicode.com/posts/${postId}`);
-    let postItem = null;
-    if (response.ok) {
-        postItem = await response.json();
+    try {
+        let res = await fetch(`https://jsonplaceholder.typicode.com/posts/${postId}`);
+        let postItem = await res.json();
         renderPostItem(postItem);
-    } else {
-        console.error("Request failed: ", response.status);
+    } catch (e) {
+        console.error("Request failed: ", e);
     }
 }
 
 async function getPostComments() {
-    const response = await fetch(`https://jsonplaceholder.typicode.com/posts/${postId}/comments`);
-    if (response.ok) {
-        const comments = await response.json();
+    try {
+        let res = await fetch(`https://jsonplaceholder.typicode.com/posts/${postId}/comments`);
+        let comments = await res.json();
         renderPostComments(comments);
-    } else {
-        console.error("Request failed: ", response.status);
+    } catch (e) {
+        console.error("Request failed: ", e);
     }
 }
 
-init();
+if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', init);
+} else {
+    init();
+}
