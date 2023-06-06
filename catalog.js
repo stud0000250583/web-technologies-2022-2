@@ -39,7 +39,6 @@ const getPhotoItems = async ({ limit, page }) => {
         items = await res.json();
     } catch (e) {
         console.error("Request failed: ", e);
-
     }
 
     return { items, total };
