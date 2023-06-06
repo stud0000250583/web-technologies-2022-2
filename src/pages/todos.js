@@ -12,7 +12,7 @@ async function getAllTodos() {
         setCheckboxListeners();
         setDeleteButtonListeners();
     } catch (e) {
-        console.error("Erron on get attempt: ", e);
+        console.error("Error on get attempt: ", e);
     }
     loading.stop();
 }
