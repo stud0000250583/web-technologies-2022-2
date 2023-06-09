@@ -1,41 +1,26 @@
 <?php
-    function second_task($a) {
-        switch ($a) {
-            case 0:
-                echo "0, ";
-            case 1:
-                echo "1, ";
-            case 2:
-                echo "2, ";
-            case 3:
-                echo "3, ";
-            case 4:
-                echo "4, ";
-            case 5:
-                echo "5, ";
-            case 6:
-                echo "6, ";
-            case 7:
-                echo "7, ";
-            case 8:
-                echo "8, ";
-            case 9:
-                echo "9, ";
-            case 10:
-                echo "10, ";
-            case 11:
-                echo "11, ";
-            case 12:
-                echo "12, ";
-            case 13:
-                echo "13, ";
-            case 14:
-                echo "14, ";
-            case 15:
-                echo "15";
-                break;
-            default:
-                echo "Value is out of bounds [0; 15]";
-        }
-    }
+$regions = array(
+    "Московская область" => [
+        "Москва",
+        "Балашиха",
+        "Домодедово",
+        "Дмитров"
+    ],
+    "Ленинградская область" => [
+        "Санкт-Петербург",
+        "Мурино",
+        "Гатчина",
+        "Сосновый Бор"
+    ],
+    "Рязанская область" => [
+        "Рязань",
+        "Касимов",
+        "Скопин",
+        "Сасово"
+    ]
+);
+
+foreach ($regions as $region => $cities) {
+    echo "<br>" . $region . ":<br>" . implode(", ", $cities) . ".<br><br>";
+}
 ?>

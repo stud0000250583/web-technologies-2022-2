@@ -1,17 +1,45 @@
 <?php
-    function add($a, $b) {
-        return $a + $b;
-    }
+$map = array(
+    'а' => 'a',
+    'б' => 'b',
+    'в' => 'v',
+    'г' => 'g',
+    'д' => 'd',
+    'е' => 'e',
+    'ё' => 'yo',
+    'ж' => 'zh',
+    'з' => 'z',
+    'и' => 'i',
+    'й' => 'j',
+    'к' => 'kh',
+    'л' => 'l',
+    'м' => 'm',
+    'н' => 'n',
+    'о' => 'o',
+    'п' => 'p',
+    'р' => 'r',
+    'с' => 's',
+    'т' => 't',
+    'у' => 'u',
+    'ф' => 'f',
+    'х' => 'h',
+    'ц' => 'c',
+    'ч' => 'ch',
+    'ш' => 'sh',
+    'щ' => 'shch',
+    'ъ' => '"',
+    'ы' => 'i',
+    'ь' => '\'',
+    'э' => 'e',
+    'ю' => 'yu',
+    'я' => 'ya'
+);
 
-    function sub($a, $b) {
-        return $a - $b;
-    }
-
-    function mul($a, $b) {
-        return $a * $b;
-    }
-
-    function div($a, $b) {
-        return $a / $b;
-    }
+$pan = mb_strtolower("В чащах юга жил бы цитрус? Да, но фальшивый экземпляр!");
+echo $pan . "<br>";
+$pan = mb_str_split($pan);
+foreach ($pan as $letter) {
+    echo ($map[$letter] ?? $letter);
+}
+echo "<br>";
 ?>

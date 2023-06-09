@@ -1,10 +1,12 @@
 <?php
-    function first_task($a, $b) {
-        if ($a >= 0 && $b >= 0)
-            return $a - $b;
-        elseif ($a < 0 && $b < 0)
-            return $a * $b;
-        else
-            return $a + $b;
-    }
+$a = 0;
+do {
+    if ($a == 0)
+        echo $a . " - это ноль<br>";
+    elseif ($a % 2)
+        echo $a . " - нечетное число<br>";
+    else
+        echo $a . " - четное число<br>";
+    $a = $a + 1;
+} while ($a <= 10);
 ?>
