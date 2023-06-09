@@ -37,6 +37,6 @@ function get_current_time()
 
 function get_current_date()
 {
-    return $currentYear = date("m.d.Y г.");
+    return date("m.d.Y г.");
 }
 ?>
