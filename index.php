@@ -32,6 +32,10 @@ function render_thumbnails()
 
 function write_to_log($operation)
 {
+    if (!is_dir('logs/')) {
+        mkdir('logs/');
+        mkdir('logs/archive/');
+    }
     $contents = "$operation\t-\t" . date('m.d.Y - H:i:s') . PHP_EOL;
     $log_archive_size = count(array_slice(scandir("logs/archive"), 2));
     $log = 'logs/log0' . $log_archive_size . '.txt';
