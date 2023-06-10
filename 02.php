@@ -23,4 +23,3 @@ $regions = array(
 foreach ($regions as $region => $cities) {
     echo "<br>" . $region . ":<br>" . implode(", ", $cities) . ".<br><br>";
 }
-?>

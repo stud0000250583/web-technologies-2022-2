@@ -49,4 +49,3 @@ function render_all($menu)
 }
 
 render_all($menu);
-?>

@@ -42,4 +42,3 @@ foreach ($pan as $letter) {
     echo ($map[$letter] ?? $letter);
 }
 echo "<br>";
-?>

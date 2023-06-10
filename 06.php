@@ -29,4 +29,3 @@ foreach ($regions as $region => $cities) {
     if (count($cities_array) != 0)
         echo $region . ":<br>" . implode(", ", $cities_array) . ".<br><br>";
 }
-?>
