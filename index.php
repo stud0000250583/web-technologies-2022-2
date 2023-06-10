@@ -83,10 +83,11 @@ if (!empty($_FILES)) {
 
 if (!empty($_GET['status'])) {
     $message = $messages[$_GET['status']];
-    if ($_GET['status'] == 'ok')
+    if ($_GET['status'] == 'ok') {
         write_to_log("Успешно загружен файл");
-    else
+    } else {
         write_to_log("Неудача при загрузке файла");
+    }
 }
 ?>
 
