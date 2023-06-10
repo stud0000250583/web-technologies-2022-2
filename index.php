@@ -53,7 +53,6 @@ if (!empty($_FILES)) {
         $file_size = $_FILES["uploaded_file"]["size"];
         $file_type = mime_content_type($_FILES["uploaded_file"]["tmp_name"]);
         $path = "upload/big/" . $file_name;
-
         if (file_exists($path)) {
             $status = 'error_file_exists';
         } elseif (!in_array($file_type, $allowed_extensions)) {
@@ -65,7 +64,6 @@ if (!empty($_FILES)) {
             $image->resizeToWidth(250);
             $thumb_path = "upload/small/" . $file_name;
             $image->save($thumb_path);
-            $status = '<p class="success">УСПЕХ: ';
             $status = 'ok';
         } else {
             $status = 'error_upload_failed';
