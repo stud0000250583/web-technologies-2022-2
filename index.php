@@ -32,18 +32,21 @@ function render_thumbnails()
 
 function write_to_log($operation)
 {
+    $contents = "$operation\t-\t" . date('m.d.Y - H:i:s') . PHP_EOL;
     $log_archive_size = count(array_slice(scandir("logs/archive"), 2));
     $log = 'logs/log0' . $log_archive_size . '.txt';
-    $log_length = count(file($log));
-    $contents = "$operation\t-\t" . date('m.d.Y - H:i:s') . PHP_EOL;
-
-    if ($log_length >= 10) {
-        $log_archive_name = 'logs/archive/log0' . ($log_archive_size) . '.txt';
-        $log_new_name = 'logs/log0' . ($log_archive_size + 1) . '.txt';
-        rename($log, $log_archive_name);
-        file_put_contents($log_new_name, $contents, FILE_APPEND);
-    } else {
+    if (!file_exists($log)) {
         file_put_contents($log, $contents, FILE_APPEND);
+    } else {
+        $log_length = count(file($log));
+        if ($log_length >= 10) {
+            $log_archive_name = 'logs/archive/log0' . ($log_archive_size) . '.txt';
+            $log_new_name = 'logs/log0' . ($log_archive_size + 1) . '.txt';
+            rename($log, $log_archive_name);
+            file_put_contents($log_new_name, $contents, FILE_APPEND);
+        } else {
+            file_put_contents($log, $contents, FILE_APPEND);
+        }
     }
 }
 
