@@ -6,27 +6,29 @@ $header = "<h1>Первый PHP проект</h1>";
 function get_current_hour()
 {
     $currentHour = date("G");
-    if ($currentHour >= 5 && $currentHour <= 20 || $currentHour == 0)
+    if ($currentHour >= 5 && $currentHour <= 20 || $currentHour == 0) {
         return $currentHour . " часов";
-    elseif ($currentHour == 1 || $currentHour == 21)
+    } elseif ($currentHour == 1 || $currentHour == 21) {
         return $currentHour . " час";
-    else
+    } else {
         return $currentHour . " часа";
+    }
 }
 
 function get_current_minute()
 {
     $currentMinute = date("i");
-    if ($currentMinute >= 5 && $currentMinute <= 19)
+    if ($currentMinute >= 5 && $currentMinute <= 19) {
         return $currentMinute . " минут";
-    else {
+    } else {
         $remainder = $currentMinute % 10;
-        if ($remainder == 0 || $remainder >= 5)
+        if ($remainder == 0 || $remainder >= 5) {
             return $currentMinute . " минут";
-        elseif ($remainder == 1)
+        } elseif ($remainder == 1) {
             return $currentMinute . " минута";
-        else
+        } else {
             return $currentMinute . " минуты";
+        }
     }
 }
 
@@ -39,4 +41,3 @@ function get_current_date()
 {
     return date("m.d.Y г.");
 }
-?>
