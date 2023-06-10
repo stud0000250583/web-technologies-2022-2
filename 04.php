@@ -16,4 +16,3 @@ function math_operation($arg1, $arg2, $operation)
             echo "Unknown operation";
     }
 }
-?>

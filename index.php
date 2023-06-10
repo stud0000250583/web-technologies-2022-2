@@ -69,10 +69,11 @@ require '06.php';
     <p>
         <?= date("Y") ?>
         <!-- Вывод года через str_replace() -->
-    <?php require '05.php' ?>
+        <?php require '05.php' ?>
 
     <h3>Шестое задание:</h3>
     <p>
+        Файл '06.php'<br>
         val = 2<br>
         pow = 10<br>
         res =

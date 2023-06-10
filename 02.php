@@ -33,10 +33,9 @@ function second_task($a)
         case 14:
             echo "14, ";
         case 15:
-            echo "15";
+            echo "15.";
             break;
         default:
             echo "Value is out of bounds [0; 15]";
     }
 }
-?>

@@ -10,4 +10,3 @@ function power($val, $pow)
     else
         return power($val, $pow - 1) * $val;
 }
-?>
