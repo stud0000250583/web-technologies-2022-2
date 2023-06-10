@@ -17,7 +17,6 @@ $messages = [
     'error_no_file' => 'Выберите файл!'
 ];
 
-
 $status = '';
 $message = 'Ожидание действия...';
 
@@ -25,17 +24,9 @@ function render_thumbnails()
 {
     $images = (array_slice(scandir("upload/small"), 2));
     foreach ($images as $image) {
-        echo '<div class="image-container">';
-
-        echo '<div class="image">';
-        echo '<a href="upload/big/' . $image . '" target="_blank"> <img src="upload/small/' . $image . '"> </a>';
-        echo '</div>';
-
-        echo '<div class="name">';
-        echo '<p>' . $image . '</p>';
-        echo '</div>';
-
-        echo '</div>';
+        echo '<div class="image-container"><div class="image">';
+        echo '<a href="upload/big/' . $image . '" target="_blank"><img src="upload/small/' . $image . '"></a></div>';
+        echo '<div class="name"><p>' . $image . '</p></div></div>';
     }
 }
 
@@ -62,7 +53,7 @@ if (!empty($_FILES)) {
         $file_size = $_FILES["uploaded_file"]["size"];
         $file_type = mime_content_type($_FILES["uploaded_file"]["tmp_name"]);
         $path = "upload/big/" . $file_name;
-    
+
         if (file_exists($path)) {
             $status = 'error_file_exists';
         } elseif (!in_array($file_type, $allowed_extensions)) {
