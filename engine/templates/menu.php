@@ -19,4 +19,3 @@ foreach ($menu as $menu_item) {
     echo $menu_item['name'] . "</a> ";
 }
 echo "<br>";
-?>
