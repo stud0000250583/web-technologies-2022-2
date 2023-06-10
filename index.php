@@ -13,7 +13,8 @@ $messages = [
     'error_file_exists' => 'Файл уже существует, выберите другой файл!',
     'error_file_too_big' => 'Размер файла превышает 5 MB!',
     'error_file_wrong_extension' => 'Файл не является изображением!',
-    'error_upload_failed' => 'Не удалось загрузить файл'
+    'error_upload_failed' => 'Не удалось загрузить файл',
+    'error_no_file' => 'Выберите файл!'
 ];
 
 
@@ -56,26 +57,30 @@ function write_to_log($operation)
 }
 
 if (!empty($_FILES)) {
-    $file_name = $_FILES["uploaded_file"]["name"];
-    $file_size = $_FILES["uploaded_file"]["size"];
-    $file_type = mime_content_type($_FILES["uploaded_file"]["tmp_name"]);
-    $path = "upload/big/" . $file_name;
-
-    if (file_exists($path)) {
-        $status = 'error_file_exists';
-    } elseif (!in_array($file_type, $allowed_extensions)) {
-        $status = 'error_file_wrong_extension';
-    } elseif ($file_size > 5242880) {
-        $status = 'error_file_too_big';
-    } elseif (move_uploaded_file($_FILES["uploaded_file"]["tmp_name"], $path)) {
-        $image = new ImageResize($path);
-        $image->resizeToWidth(250);
-        $thumb_path = "upload/small/" . $file_name;
-        $image->save($thumb_path);
-        $status = '<p class="success">УСПЕХ: ';
-        $status = 'ok';
+    if (!$_FILES["uploaded_file"]["error"]) {
+        $file_name = $_FILES["uploaded_file"]["name"];
+        $file_size = $_FILES["uploaded_file"]["size"];
+        $file_type = mime_content_type($_FILES["uploaded_file"]["tmp_name"]);
+        $path = "upload/big/" . $file_name;
+    
+        if (file_exists($path)) {
+            $status = 'error_file_exists';
+        } elseif (!in_array($file_type, $allowed_extensions)) {
+            $status = 'error_file_wrong_extension';
+        } elseif ($file_size > 5242880) {
+            $status = 'error_file_too_big';
+        } elseif (move_uploaded_file($_FILES["uploaded_file"]["tmp_name"], $path)) {
+            $image = new ImageResize($path);
+            $image->resizeToWidth(250);
+            $thumb_path = "upload/small/" . $file_name;
+            $image->save($thumb_path);
+            $status = '<p class="success">УСПЕХ: ';
+            $status = 'ok';
+        } else {
+            $status = 'error_upload_failed';
+        }
     } else {
-        $status = 'error_upload_failed';
+        $status = 'error_no_file';
     }
     header("Location: index.php?status=$status");
 }
