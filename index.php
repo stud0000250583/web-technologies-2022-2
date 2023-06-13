@@ -29,9 +29,9 @@ function render_parent($item)
         echo '
         <div class="list-item list-item_open" data-parent>
             <div class="list-item__inner">
-                <img class="list-item__arrow" src="img/chevron-down.png" alt="chevron-down" data-open>
                 <img class="list-item__folder" src="img/folder.png" alt="folder">
                 <span>' . $item['name'] . '</span>
+                <img class="list-item__arrow" src="img/chevron-down.png" alt="chevron-down" data-open>
             </div>
         <div class="list-item__items">';
         foreach ($children as $child) {

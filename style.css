@@ -1,3 +1,7 @@
+body {
+    font-family: 'JetBrains Mono', 'Cascadia Mono', monospace;
+}
+
 .list-item {
     font-size: 16px;
 }
@@ -8,18 +12,19 @@
 }
 
 .list-item__items {
-    padding-left: 1.5em;
+    padding-left: 15px;
     display: none;
 }
 
 .list-item__arrow {
-    width: 1em;
-    height: 1em;
+    height: 20px;
+    width: 15px;
+    padding: 5px;
     cursor: pointer;
 }
 
 .list-item__folder {
-    width: 2em;
+    width: 30px;
 }
 
 .list-item_open>.list-item__items {
