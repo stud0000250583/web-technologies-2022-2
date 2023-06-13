@@ -29,9 +29,9 @@ function render_parent($item)
         echo '
         <div class="list-item list-item_open" data-parent>
             <div class="list-item__inner">
-                <img class="list-item__folder" src="img/folder.png" alt="folder">
+                <img class="list-item__folder" src="/img/folder.png" alt="folder">
                 <span>' . $item['name'] . '</span>
-                <img class="list-item__arrow" src="img/chevron-down.png" alt="chevron-down" data-open>
+                <img class="list-item__arrow" src="/img/chevron-down.png" alt="chevron-down" data-open>
             </div>
         <div class="list-item__items">';
         foreach ($children as $child) {
@@ -48,7 +48,7 @@ function render_child($item)
     echo '
     <div class="list-item">
         <div class="list-item__inner">
-            <img class="list-item__folder" src="img/folder.png" alt="folder">
+            <img class="list-item__folder" src="/img/folder.png" alt="folder">
             <span>' . $item['name'] . '</span>
         </div>
     </div>';
@@ -61,7 +61,7 @@ function render_child($item)
 <head>
     <meta charset="UTF-8">
     <title>List Item</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="/styles/style.css">
 </head>
 
 <body>
@@ -70,7 +70,7 @@ function render_child($item)
             <?= render($menu) ?>
         </div>
     </div>
-    <script src="script.js"></script>
+    <script src="/scripts/script.js"></script>
 </body>
 
 </html>
