@@ -1,20 +1,30 @@
 <?php
 require 'db.php';
+$menu = get_assoc_result("SELECT * FROM menu");
 
-function render()
+function render($menu)
 {
-    $sql = "SELECT * FROM menu WHERE parent_ID IS NULL";
-    $data = get_assoc_result($sql);
-    foreach ($data as $item) {
-        render_parent($item);
+    foreach ($menu as $item) {
+        if (!isset($item['parent_id'])) {
+            echo render_parent($item);
+        }
     }
+}
+
+function get_children($parent_id) {
+    $menu = $GLOBALS['menu'];
+    $children = [];
+    foreach ($menu as $item) {
+        if ($item['parent_id'] == $parent_id)
+            array_push($children, $item);
+    }
+    return $children;
 }
 
 function render_parent($item)
 {
     $parent_id = $item['id'];
-    $sql = "SELECT * FROM menu WHERE parent_id = $parent_id";
-    $children = get_assoc_result($sql);
+    $children = get_children($parent_id);
     if (count($children) > 0) {
         $res = '
         <div class="list-item list-item_open" data-parent>
@@ -58,7 +68,7 @@ function render_child($item)
 <body>
     <div class="list-items" id="list-items">
         <div class="test">
-            <?= render() ?>
+            <?= render($menu) ?>
         </div>
     </div>
     <script src="script.js"></script>
