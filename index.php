@@ -6,7 +6,7 @@ function render($menu)
 {
     foreach ($menu as $item) {
         if (!isset($item['parent_id'])) {
-            echo render_parent($item);
+            render_parent($item);
         }
     }
 }
@@ -26,7 +26,7 @@ function render_parent($item)
     $parent_id = $item['id'];
     $children = get_children($parent_id);
     if (count($children) > 0) {
-        $res = '
+        echo '
         <div class="list-item list-item_open" data-parent>
             <div class="list-item__inner">
                 <img class="list-item__arrow" src="img/chevron-down.png" alt="chevron-down" data-open>
@@ -34,19 +34,18 @@ function render_parent($item)
                 <span>' . $item['name'] . '</span>
             </div>
         <div class="list-item__items">';
-        echo $res;
         foreach ($children as $child) {
             render_parent($child);
         }
         echo '</div></div>';
     } else {
-        echo render_child($item);
+        render_child($item);
     }
 }
 
 function render_child($item)
 {
-    return '
+    echo '
     <div class="list-item">
         <div class="list-item__inner">
             <img class="list-item__folder" src="img/folder.png" alt="folder">
